@@ -71,7 +71,7 @@ def draw_icon(size):
     d.rectangle([px(8), px(33), px(39), px(39)], fill=(255, 255, 255, 255))
 
     # princess
-    d.polygon([(24, 21), (29, 31), (19, 31)], fill=(255, 104, 166, 255))       # dress
+    d.polygon([(px(24), px(21)), (px(29), px(31)), (px(19), px(31))], fill=(255, 104, 166, 255))  # dress
     d.ellipse([px(21), px(13.5), px(27), px(19.5)], fill=(255, 208, 180, 255))  # head
     d.pieslice([px(20.7), px(13), px(27.3), px(19.6)], 180, 360, fill=(122, 63, 160, 255))  # hair
     d.polygon(                                                                  # crown

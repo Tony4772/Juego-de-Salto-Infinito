@@ -4,12 +4,20 @@
         "source": "com.ebyzom.skydreams.app-main-6:/mipmap-xxhdpi/ic_launcher_round.png"
     },
     {
-        "merged": "com.ebyzom.skydreams.app-debug-4:/raw_sfx_jump.wav.flat",
-        "source": "com.ebyzom.skydreams.app-main-6:/raw/sfx_jump.wav"
+        "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\9.3.0\\com.ebyzom.skydreams.app-debug-4:\\mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\Usuario\\.gradle\\daemon\\9.3.0\\com.ebyzom.skydreams.app-main-6:\\mipmap-xxhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\9.3.0\\com.ebyzom.skydreams.app-debug-4:\\mipmap-xhdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\Usuario\\.gradle\\daemon\\9.3.0\\com.ebyzom.skydreams.app-main-6:\\mipmap-xhdpi\\ic_launcher_round.png"
     },
     {
         "merged": "com.ebyzom.skydreams.app-debug-4:/mipmap-hdpi_ic_launcher.png.flat",
         "source": "com.ebyzom.skydreams.app-main-6:/mipmap-hdpi/ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\9.3.0\\com.ebyzom.skydreams.app-debug-4:\\mipmap-xxxhdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\Usuario\\.gradle\\daemon\\9.3.0\\com.ebyzom.skydreams.app-main-6:\\mipmap-xxxhdpi\\ic_launcher_round.png"
     },
     {
         "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\9.3.0\\com.ebyzom.skydreams.app-debug-4:\\drawable-xxxhdpi_ic_launcher_background.png.flat",
@@ -32,56 +40,52 @@
         "source": "C:\\Users\\Usuario\\.gradle\\daemon\\9.3.0\\com.ebyzom.skydreams.app-pngs-0:\\drawable-xhdpi\\ic_launcher_background.png"
     },
     {
-        "merged": "com.ebyzom.skydreams.app-debug-4:/drawable-ldpi_ic_launcher_background.png.flat",
-        "source": "com.ebyzom.skydreams.app-pngs-0:/drawable-ldpi/ic_launcher_background.png"
+        "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\9.3.0\\com.ebyzom.skydreams.app-debug-4:\\raw_music_loop.wav.flat",
+        "source": "C:\\Users\\Usuario\\.gradle\\daemon\\9.3.0\\com.ebyzom.skydreams.app-main-6:\\raw\\music_loop.wav"
     },
     {
-        "merged": "com.ebyzom.skydreams.app-debug-4:/mipmap-anydpi-v26_ic_launcher.xml.flat",
-        "source": "com.ebyzom.skydreams.app-main-6:/mipmap-anydpi-v26/ic_launcher.xml"
-    },
-    {
-        "merged": "com.ebyzom.skydreams.app-debug-4:/raw_sfx_click.wav.flat",
-        "source": "com.ebyzom.skydreams.app-main-6:/raw/sfx_click.wav"
+        "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\9.3.0\\com.ebyzom.skydreams.app-debug-4:\\raw_sfx_gameover.wav.flat",
+        "source": "C:\\Users\\Usuario\\.gradle\\daemon\\9.3.0\\com.ebyzom.skydreams.app-main-6:\\raw\\sfx_gameover.wav"
     },
     {
         "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\9.3.0\\com.ebyzom.skydreams.app-debug-4:\\drawable-xxhdpi_ic_launcher_background.png.flat",
         "source": "C:\\Users\\Usuario\\.gradle\\daemon\\9.3.0\\com.ebyzom.skydreams.app-pngs-0:\\drawable-xxhdpi\\ic_launcher_background.png"
     },
     {
+        "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\9.3.0\\com.ebyzom.skydreams.app-debug-4:\\raw_sfx_jump.wav.flat",
+        "source": "C:\\Users\\Usuario\\.gradle\\daemon\\9.3.0\\com.ebyzom.skydreams.app-main-6:\\raw\\sfx_jump.wav"
+    },
+    {
+        "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\9.3.0\\com.ebyzom.skydreams.app-debug-4:\\mipmap-hdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\Usuario\\.gradle\\daemon\\9.3.0\\com.ebyzom.skydreams.app-main-6:\\mipmap-hdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\9.3.0\\com.ebyzom.skydreams.app-debug-4:\\mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "C:\\Users\\Usuario\\.gradle\\daemon\\9.3.0\\com.ebyzom.skydreams.app-main-6:\\mipmap-anydpi-v26\\ic_launcher.xml"
+    },
+    {
         "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\9.3.0\\com.ebyzom.skydreams.app-debug-4:\\drawable-mdpi_ic_launcher_background.png.flat",
         "source": "C:\\Users\\Usuario\\.gradle\\daemon\\9.3.0\\com.ebyzom.skydreams.app-pngs-0:\\drawable-mdpi\\ic_launcher_background.png"
     },
     {
-        "merged": "com.ebyzom.skydreams.app-debug-4:/raw_sfx_hit.wav.flat",
-        "source": "com.ebyzom.skydreams.app-main-6:/raw/sfx_hit.wav"
+        "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\9.3.0\\com.ebyzom.skydreams.app-debug-4:\\mipmap-mdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\Usuario\\.gradle\\daemon\\9.3.0\\com.ebyzom.skydreams.app-main-6:\\mipmap-mdpi\\ic_launcher_round.png"
     },
     {
-        "merged": "com.ebyzom.skydreams.app-debug-4:/drawable-anydpi-v24_ic_launcher_background.xml.flat",
-        "source": "com.ebyzom.skydreams.app-pngs-0:/drawable-anydpi-v24/ic_launcher_background.xml"
+        "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\9.3.0\\com.ebyzom.skydreams.app-debug-4:\\mipmap-xxhdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\Usuario\\.gradle\\daemon\\9.3.0\\com.ebyzom.skydreams.app-main-6:\\mipmap-xxhdpi\\ic_launcher_round.png"
     },
     {
-        "merged": "com.ebyzom.skydreams.app-debug-4:/raw_sfx_star.wav.flat",
-        "source": "com.ebyzom.skydreams.app-main-6:/raw/sfx_star.wav"
+        "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\9.3.0\\com.ebyzom.skydreams.app-debug-4:\\mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\Usuario\\.gradle\\daemon\\9.3.0\\com.ebyzom.skydreams.app-main-6:\\mipmap-xxxhdpi\\ic_launcher.png"
     },
     {
         "merged": "com.ebyzom.skydreams.app-debug-4:/mipmap-xxxhdpi_ic_launcher_round.png.flat",
         "source": "com.ebyzom.skydreams.app-main-6:/mipmap-xxxhdpi/ic_launcher_round.png"
     },
     {
-        "merged": "com.ebyzom.skydreams.app-debug-4:/raw_sfx_gameover.wav.flat",
-        "source": "com.ebyzom.skydreams.app-main-6:/raw/sfx_gameover.wav"
-    },
-    {
-        "merged": "com.ebyzom.skydreams.app-debug-4:/drawable-mdpi_ic_launcher_background.png.flat",
-        "source": "com.ebyzom.skydreams.app-pngs-0:/drawable-mdpi/ic_launcher_background.png"
-    },
-    {
-        "merged": "com.ebyzom.skydreams.app-debug-4:/drawable-hdpi_ic_launcher_background.png.flat",
-        "source": "com.ebyzom.skydreams.app-pngs-0:/drawable-hdpi/ic_launcher_background.png"
-    },
-    {
-        "merged": "com.ebyzom.skydreams.app-debug-4:/drawable-xxxhdpi_ic_launcher_background.png.flat",
-        "source": "com.ebyzom.skydreams.app-pngs-0:/drawable-xxxhdpi/ic_launcher_background.png"
+        "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\9.3.0\\com.ebyzom.skydreams.app-debug-4:\\mipmap-mdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\Usuario\\.gradle\\daemon\\9.3.0\\com.ebyzom.skydreams.app-main-6:\\mipmap-mdpi\\ic_launcher.png"
     },
     {
         "merged": "com.ebyzom.skydreams.app-debug-4:/mipmap-xxxhdpi_ic_launcher.png.flat",
@@ -92,48 +96,44 @@
         "source": "C:\\Users\\Usuario\\.gradle\\daemon\\9.3.0\\com.ebyzom.skydreams.app-pngs-0:\\drawable-ldpi\\ic_launcher_background.png"
     },
     {
+        "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\9.3.0\\com.ebyzom.skydreams.app-debug-4:\\raw_sfx_hit.wav.flat",
+        "source": "C:\\Users\\Usuario\\.gradle\\daemon\\9.3.0\\com.ebyzom.skydreams.app-main-6:\\raw\\sfx_hit.wav"
+    },
+    {
         "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\9.3.0\\com.ebyzom.skydreams.app-debug-4:\\drawable-anydpi-v24_ic_launcher_background.xml.flat",
         "source": "C:\\Users\\Usuario\\.gradle\\daemon\\9.3.0\\com.ebyzom.skydreams.app-pngs-0:\\drawable-anydpi-v24\\ic_launcher_background.xml"
-    },
-    {
-        "merged": "com.ebyzom.skydreams.app-debug-4:/raw_sfx_best.wav.flat",
-        "source": "com.ebyzom.skydreams.app-main-6:/raw/sfx_best.wav"
-    },
-    {
-        "merged": "com.ebyzom.skydreams.app-debug-4:/mipmap-mdpi_ic_launcher.png.flat",
-        "source": "com.ebyzom.skydreams.app-main-6:/mipmap-mdpi/ic_launcher.png"
-    },
-    {
-        "merged": "com.ebyzom.skydreams.app-debug-4:/raw_sfx_powerup.wav.flat",
-        "source": "com.ebyzom.skydreams.app-main-6:/raw/sfx_powerup.wav"
-    },
-    {
-        "merged": "com.ebyzom.skydreams.app-debug-4:/mipmap-mdpi_ic_launcher_round.png.flat",
-        "source": "com.ebyzom.skydreams.app-main-6:/mipmap-mdpi/ic_launcher_round.png"
-    },
-    {
-        "merged": "com.ebyzom.skydreams.app-debug-4:/drawable_ic_launcher_foreground.xml.flat",
-        "source": "com.ebyzom.skydreams.app-main-6:/drawable/ic_launcher_foreground.xml"
     },
     {
         "merged": "com.ebyzom.skydreams.app-debug-4:/mipmap-xhdpi_ic_launcher_round.png.flat",
         "source": "com.ebyzom.skydreams.app-main-6:/mipmap-xhdpi/ic_launcher_round.png"
     },
     {
-        "merged": "com.ebyzom.skydreams.app-debug-4:/drawable-xhdpi_ic_launcher_background.png.flat",
-        "source": "com.ebyzom.skydreams.app-pngs-0:/drawable-xhdpi/ic_launcher_background.png"
+        "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\9.3.0\\com.ebyzom.skydreams.app-debug-4:\\raw_sfx_best.wav.flat",
+        "source": "C:\\Users\\Usuario\\.gradle\\daemon\\9.3.0\\com.ebyzom.skydreams.app-main-6:\\raw\\sfx_best.wav"
+    },
+    {
+        "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\9.3.0\\com.ebyzom.skydreams.app-debug-4:\\mipmap-hdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\Usuario\\.gradle\\daemon\\9.3.0\\com.ebyzom.skydreams.app-main-6:\\mipmap-hdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\9.3.0\\com.ebyzom.skydreams.app-debug-4:\\raw_sfx_star.wav.flat",
+        "source": "C:\\Users\\Usuario\\.gradle\\daemon\\9.3.0\\com.ebyzom.skydreams.app-main-6:\\raw\\sfx_star.wav"
     },
     {
         "merged": "com.ebyzom.skydreams.app-debug-4:/mipmap-hdpi_ic_launcher_round.png.flat",
         "source": "com.ebyzom.skydreams.app-main-6:/mipmap-hdpi/ic_launcher_round.png"
     },
     {
-        "merged": "com.ebyzom.skydreams.app-debug-4:/drawable-xxhdpi_ic_launcher_background.png.flat",
-        "source": "com.ebyzom.skydreams.app-pngs-0:/drawable-xxhdpi/ic_launcher_background.png"
+        "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\9.3.0\\com.ebyzom.skydreams.app-debug-4:\\raw_sfx_powerup.wav.flat",
+        "source": "C:\\Users\\Usuario\\.gradle\\daemon\\9.3.0\\com.ebyzom.skydreams.app-main-6:\\raw\\sfx_powerup.wav"
     },
     {
-        "merged": "com.ebyzom.skydreams.app-debug-4:/raw_music_loop.wav.flat",
-        "source": "com.ebyzom.skydreams.app-main-6:/raw/music_loop.wav"
+        "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\9.3.0\\com.ebyzom.skydreams.app-debug-4:\\mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\Usuario\\.gradle\\daemon\\9.3.0\\com.ebyzom.skydreams.app-main-6:\\mipmap-xhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\9.3.0\\com.ebyzom.skydreams.app-debug-4:\\raw_sfx_click.wav.flat",
+        "source": "C:\\Users\\Usuario\\.gradle\\daemon\\9.3.0\\com.ebyzom.skydreams.app-main-6:\\raw\\sfx_click.wav"
     },
     {
         "merged": "com.ebyzom.skydreams.app-debug-4:/mipmap-xhdpi_ic_launcher.png.flat",
