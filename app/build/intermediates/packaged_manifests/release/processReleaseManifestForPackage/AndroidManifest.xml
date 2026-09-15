@@ -8,14 +8,19 @@
         android:minSdkVersion="23"
         android:targetSdkVersion="35" />
 
+    <uses-permission android:name="android.permission.VIBRATE" />
+
     <application
         android:allowBackup="false"
         android:extractNativeLibs="false"
+        android:hardwareAccelerated="true"
+        android:icon="@mipmap/ic_launcher"
         android:label="Sky Dreams"
-        android:supportsRtl="true"
-        android:theme="@style/AppTheme" >
+        android:roundIcon="@mipmap/ic_launcher"
+        android:supportsRtl="true" >
         <activity
             android:name="com.ebyzom.skydreams.MainActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
             android:exported="true"
             android:screenOrientation="portrait" >
             <intent-filter>

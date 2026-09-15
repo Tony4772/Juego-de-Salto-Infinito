@@ -9,6 +9,45 @@
                         "startLines": "1",
                         "startColumns": "4",
                         "startOffsets": "16",
+                        "endLines": "10",
+                        "endColumns": "12",
+                        "endOffsets": "618"
+                    },
+                    "to": {
+                        "startLines": "3",
+                        "startColumns": "4",
+                        "startOffsets": "103",
+                        "endLines": "12",
+                        "endColumns": "12",
+                        "endOffsets": "705"
+                    }
+                },
+                {
+                    "source": "D:\\AndroidStudioProjects\\Juego de Salto Infinito\\app\\src\\main\\res\\values\\strings.xml",
+                    "from": {
+                        "startLines": "-1",
+                        "startColumns": "-1",
+                        "startOffsets": "-1"
+                    },
+                    "to": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "47",
+                        "endOffsets": "98"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "C:\\Users\\Usuario\\.gradle\\daemon\\9.3.0\\com.ebyzom.skydreams.app-release-4:\\values_values.arsc.flat",
+            "map": [
+                {
+                    "source": "D:\\AndroidStudioProjects\\Juego de Salto Infinito\\app\\src\\main\\res\\values\\styles.xml",
+                    "from": {
+                        "startLines": "1",
+                        "startColumns": "4",
+                        "startOffsets": "16",
                         "endLines": "5",
                         "endColumns": "12",
                         "endOffsets": "382"

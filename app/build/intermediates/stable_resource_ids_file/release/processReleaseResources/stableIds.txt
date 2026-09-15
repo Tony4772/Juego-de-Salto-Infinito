@@ -1,2 +1,15 @@
-com.ebyzom.skydreams:style/AppTheme = 0x7f020000
-com.ebyzom.skydreams:string/app_name = 0x7f010000
+com.ebyzom.skydreams:style/AppTheme = 0x7f050000
+com.ebyzom.skydreams:raw/sfx_star = 0x7f030007
+com.ebyzom.skydreams:raw/sfx_click = 0x7f030002
+com.ebyzom.skydreams:raw/sfx_hit = 0x7f030004
+com.ebyzom.skydreams:string/app_name = 0x7f040000
+com.ebyzom.skydreams:raw/sfx_gameover = 0x7f030003
+com.ebyzom.skydreams:raw/sfx_best = 0x7f030001
+com.ebyzom.skydreams:drawable/ic_launcher_foreground = 0x7f010002
+com.ebyzom.skydreams:mipmap/ic_launcher = 0x7f020000
+com.ebyzom.skydreams:raw/sfx_jump = 0x7f030005
+com.ebyzom.skydreams:raw/music_loop = 0x7f030000
+com.ebyzom.skydreams:raw/sfx_powerup = 0x7f030006
+com.ebyzom.skydreams:drawable/$ic_launcher_background__0 = 0x7f010000
+com.ebyzom.skydreams:drawable/ic_launcher_background = 0x7f010001
+com.ebyzom.skydreams:mipmap/ic_launcher_round = 0x7f020001

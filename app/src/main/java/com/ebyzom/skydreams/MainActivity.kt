@@ -972,17 +972,17 @@ private class SkyDreamView(context: android.content.Context) : View(context) {
         p.shader = null
 
         // stars counter
-        drawSparkle(c, width * 0.68f, 44f, 9f, C.GOLD, time * 50f)
+        drawSparkle(c, width * 0.575f, 44f, 9f, C.GOLD, time * 50f)
         textMed.textAlign = Paint.Align.LEFT
         textMed.textSize = 17f
         textMed.color = Color.WHITE
-        c.drawText("$stars", width * 0.68f + 16f, 50f, textMed)
+        c.drawText("$stars", width * 0.575f + 16f, 50f, textMed)
 
         // best
         textMed.textAlign = Paint.Align.RIGHT
         textMed.textSize = 14f
         textMed.color = C.TEXT_SOFT
-        c.drawText("★ $best m", width - 96f, 50f, textMed)
+        c.drawText("★ $best m", width - 30f, 50f, textMed)
 
         // combo badge
         if (combo > 1) {
@@ -1045,7 +1045,7 @@ private class SkyDreamView(context: android.content.Context) : View(context) {
         textMed.textSize = 19f
         textMed.color = C.TEXT_SOFT
         c.drawText("Grace llegó a $score metros", width / 2f, cy + 108f, textMed)
-        drawSparkle(c, width / 2f - 86f, cy + 148f, 9f, C.GOLD, time * 60f)
+        drawSparkle(c, width / 2f - 140f, cy + 148f, 9f, C.GOLD, time * 60f)
         text.textAlign = Paint.Align.CENTER
         text.textSize = 24f
         text.color = C.GOLD
@@ -1057,7 +1057,7 @@ private class SkyDreamView(context: android.content.Context) : View(context) {
         // stars earned line
         textMed.textSize = 14f
         textMed.color = Color.argb(200, 255, 255, 255)
-        c.drawText("✦ $stars estrellas recogidas", width / 2f, cy + ph - 18f, textMed)
+        c.drawText("✦ $stars estrellas recogidas", width / 2f, cy + 210f, textMed)
     }
 
     private fun drawPaused(c: Canvas) {

@@ -23,7 +23,7 @@
 // ------------------------------------------------------------ setup
 const LW = 440, LH = 880;
 const cv = document.getElementById("cv");
-const ctx = cv.getContext("2d");
+let ctx = cv.getContext("2d");
 function fit(){
   const dpr = Math.min(2, window.devicePixelRatio || 1);
   const vw = window.innerWidth  || document.documentElement.clientWidth  || 320;
@@ -647,11 +647,11 @@ function drawHud(){
   g.addColorStop(0, C.PINK); g.addColorStop(1, C.GOLD);
   ctx.fillStyle = g;
   ctx.beginPath(); ctx.roundRect(barX, barY, barW*prog, 9, 4.5); ctx.fill();
-  sparkle(W*0.68, 44, 9, C.GOLD, time*50);
+  sparkle(W*0.575, 44, 9, C.GOLD, time*50);
   font(17, true, "left"); ctx.fillStyle = "#FFFFFF";
-  ctx.fillText("" + stars, W*0.68 + 16, 50);
+  ctx.fillText("" + stars, W*0.575 + 16, 50);
   font(14, false, "right"); ctx.fillStyle = C.SOFT;
-  ctx.fillText("★ " + best + " m", W - 96, 50);
+  ctx.fillText("★ " + best + " m", W - 30, 50);
   if(combo > 1){
     const pulse = 1 + 0.06*sin(time*12);
     ctx.save(); ctx.scale(pulse,pulse);
@@ -721,13 +721,13 @@ function drawGameOver(){
   }
   font(19, false, "center"); ctx.fillStyle = C.SOFT;
   ctx.fillText("Grace llegó a " + score + " metros", W/2, top+108);
-  sparkle(W/2-86, top+148, 9, C.GOLD, time*60);
+  sparkle(W/2-140, top+148, 9, C.GOLD, time*60);
   font(24, true, "center"); ctx.fillStyle = C.GOLD;
   ctx.fillText("Récord: " + best + " m", W/2, top+156);
   drawButton(btnRetry, 19);
   drawButton(btnMenu, 17);
   font(14, false, "center"); ctx.fillStyle = "rgba(255,255,255,0.78)";
-  ctx.fillText("✦ " + stars + " estrellas recogidas", W/2, top+ph-18);
+  ctx.fillText("✦ " + stars + " estrellas recogidas", W/2, top+210);
 }
 
 function drawPaused(){
@@ -839,7 +839,82 @@ window.addEventListener("keyup", e=>{
   if(e.code==="ArrowRight"|| e.code==="KeyD") right = false;
 });
 
+// ------------------------------------------------------------ screenshot tour mode
+// Usage: sky_dreams_preview.html?shots=1  — renders at 1080x2160, walks every
+// screen, stages an attractive gameplay scene and POSTs PNGs to 127.0.0.1:8971.
+(function(){
+  const q = new URLSearchParams(location.search);
+  if(q.get("shots") !== "1") return;
+  const POST = "http://127.0.0.1:8971/";
+  const SCALE = 1080 / W;
+
+  // hi-res canvas
+  const hi = document.createElement("canvas");
+  hi.width = Math.round(W*SCALE); hi.height = Math.round(H*SCALE);
+  const hctx = hi.getContext("2d");
+  const mainCtx = ctx;
+  function snap(name){
+    ctx = hctx;                 // redirect every draw*() to the hi-res canvas
+    ctx.setTransform(SCALE,0,0,SCALE,0,0);
+    ctx.clearRect(0,0,W,H);
+    drawSky();
+    if(state===0) drawMenu();
+    else if(state===1){ drawWorld(); drawHud(); }
+    else if(state===2){ drawWorld(); drawGameOver(); }
+    else if(state===3) drawCredits();
+    else if(state===4){ drawWorld(); drawHud(); drawPaused(); }
+    if(flash>0){ ctx.fillStyle=`rgba(255,255,255,${flash*0.67})`; ctx.fillRect(0,0,W,H); }
+    ctx = mainCtx;
+    const data = hi.toDataURL("image/png").split(",")[1];
+    return fetch(POST, {method:"POST", body: JSON.stringify({name, data})});
+  }
+  const wait = ms => new Promise(r=>setTimeout(r,ms));
+  async function run(){
+    await wait(800);
+    // 1. main menu
+    best = Math.max(best, 412);   // show a nice record in the menu chip
+    await snap("01_menu");
+    // 2. staged gameplay scene
+    reset();
+    score = 347; level = 3; stars = 18; combo = 4; comboTimer = 1.9;
+    cameraY = 880;               // positive: shows the upper platforms on screen
+    px = W*0.32; py = H*0.42; vy = -640; vx = 60;
+    capeT = 1.2; jumpPulse = 0.6;
+    floats.push(new FloatText(px+70, py-60, "+40  x4", C.GOLD, 0.9));
+    floats.push(new FloatText(W*0.72, H*0.30, "¡NIVEL 3!", C.GOLD, 1.3));
+    burst(px, py+60, "#FFF3AD", 14, 1.1);
+    rings.push(new Ring(px, py+60, 10, 90, 0.5, "#FFFFFF"));
+    rings.push(new Ring(W*0.72, H*0.34, 12, 130, 0.6, C.GOLD));
+    for(let i=0;i<14;i++){ trail.push(new TrailDot(px+ (rand()-0.5)*8, py+80+i*14)); trail[trail.length-1].life = 0.32 - i*0.02; }
+    await snap("02_gameplay_comboBox");
+    // 3. gem + boost action scene
+    score = 512; level = 4; stars = 27; combo = 0; comboTimer = 0;
+    floats.length = 0; rings.length = 0; particles.length = 0;
+    cameraY = 1560; px = W*0.62; py = H*0.36; vy = -900; vx = -40;
+    floats.push(new FloatText(px, py-70, "¡IMPULSO!", C.GOLD, 0.9));
+    burst(px, py+80, C.GOLD, 18, 1.3);
+    rings.push(new Ring(px, py+80, 10, 120, 0.55, C.GOLD));
+    confetti(W*0.62, H*0.42, 12);
+    flash = 0.25;
+    await snap("03_gameplay_impulso");
+    // 4. game over with new record
+    floats.length = 0; rings.length = 0; particles.length = 0;
+    state = 2; panelT = 1; newBest = true; score = 512; stars = 27; best = 512;
+    py = H + 300;              // hide Grace behind the bottom edge
+    confetti(W*0.28, H*0.16, 10); confetti(W*0.72, H*0.30, 10);
+    await wait(100);
+    await snap("04_nuevo_record");
+    // 5. credits
+    state = 3;
+    await snap("05_creditos");
+    document.title = "SHOTS DONE";
+  }
+  run();
+})();
+
 })();
 </script>
 </body>
+</html>
+
 </html>
