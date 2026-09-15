@@ -1,4 +1,4 @@
-#Mon Sep 14 19:12:06 PET 2026
+#Mon Sep 14 19:34:43 PET 2026
 base.0=D\:\\AndroidStudioProjects\\Juego de Salto Infinito\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
 base.1=D\:\\AndroidStudioProjects\\Juego de Salto Infinito\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex
 base.2=D\:\\AndroidStudioProjects\\Juego de Salto Infinito\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\4\\classes.dex
