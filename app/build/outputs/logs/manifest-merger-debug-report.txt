@@ -1,0 +1,63 @@
+-- Merging decision tree log ---
+manifest
+ADDED from D:\AndroidStudioProjects\Juego de Salto Infinito\app\src\main\AndroidManifest.xml:2:1-25:12
+INJECTED from D:\AndroidStudioProjects\Juego de Salto Infinito\app\src\main\AndroidManifest.xml:2:1-25:12
+INJECTED from D:\AndroidStudioProjects\Juego de Salto Infinito\app\src\main\AndroidManifest.xml:2:1-25:12
+INJECTED from D:\AndroidStudioProjects\Juego de Salto Infinito\app\src\main\AndroidManifest.xml:2:1-25:12
+	package
+		INJECTED from D:\AndroidStudioProjects\Juego de Salto Infinito\app\src\main\AndroidManifest.xml
+	android:versionName
+		INJECTED from D:\AndroidStudioProjects\Juego de Salto Infinito\app\src\main\AndroidManifest.xml
+	android:versionCode
+		INJECTED from D:\AndroidStudioProjects\Juego de Salto Infinito\app\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from D:\AndroidStudioProjects\Juego de Salto Infinito\app\src\main\AndroidManifest.xml:2:11-69
+uses-permission#android.permission.VIBRATE
+ADDED from D:\AndroidStudioProjects\Juego de Salto Infinito\app\src\main\AndroidManifest.xml:4:5-66
+	android:name
+		ADDED from D:\AndroidStudioProjects\Juego de Salto Infinito\app\src\main\AndroidManifest.xml:4:22-63
+application
+ADDED from D:\AndroidStudioProjects\Juego de Salto Infinito\app\src\main\AndroidManifest.xml:6:5-24:19
+INJECTED from D:\AndroidStudioProjects\Juego de Salto Infinito\app\src\main\AndroidManifest.xml:6:5-24:19
+	android:extractNativeLibs
+		INJECTED from D:\AndroidStudioProjects\Juego de Salto Infinito\app\src\main\AndroidManifest.xml
+	android:supportsRtl
+		ADDED from D:\AndroidStudioProjects\Juego de Salto Infinito\app\src\main\AndroidManifest.xml:11:9-35
+	android:label
+		ADDED from D:\AndroidStudioProjects\Juego de Salto Infinito\app\src\main\AndroidManifest.xml:9:9-35
+	android:hardwareAccelerated
+		ADDED from D:\AndroidStudioProjects\Juego de Salto Infinito\app\src\main\AndroidManifest.xml:12:9-43
+	android:roundIcon
+		ADDED from D:\AndroidStudioProjects\Juego de Salto Infinito\app\src\main\AndroidManifest.xml:8:9-48
+	android:icon
+		ADDED from D:\AndroidStudioProjects\Juego de Salto Infinito\app\src\main\AndroidManifest.xml:7:9-43
+	android:allowBackup
+		ADDED from D:\AndroidStudioProjects\Juego de Salto Infinito\app\src\main\AndroidManifest.xml:10:9-36
+activity#com.ebyzom.skydreams.MainActivity
+ADDED from D:\AndroidStudioProjects\Juego de Salto Infinito\app\src\main\AndroidManifest.xml:14:9-23:20
+	android:screenOrientation
+		ADDED from D:\AndroidStudioProjects\Juego de Salto Infinito\app\src\main\AndroidManifest.xml:16:13-49
+	android:exported
+		ADDED from D:\AndroidStudioProjects\Juego de Salto Infinito\app\src\main\AndroidManifest.xml:18:13-36
+	android:configChanges
+		ADDED from D:\AndroidStudioProjects\Juego de Salto Infinito\app\src\main\AndroidManifest.xml:17:13-74
+	android:name
+		ADDED from D:\AndroidStudioProjects\Juego de Salto Infinito\app\src\main\AndroidManifest.xml:15:13-41
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from D:\AndroidStudioProjects\Juego de Salto Infinito\app\src\main\AndroidManifest.xml:19:13-22:29
+action#android.intent.action.MAIN
+ADDED from D:\AndroidStudioProjects\Juego de Salto Infinito\app\src\main\AndroidManifest.xml:20:17-69
+	android:name
+		ADDED from D:\AndroidStudioProjects\Juego de Salto Infinito\app\src\main\AndroidManifest.xml:20:25-66
+category#android.intent.category.LAUNCHER
+ADDED from D:\AndroidStudioProjects\Juego de Salto Infinito\app\src\main\AndroidManifest.xml:21:17-77
+	android:name
+		ADDED from D:\AndroidStudioProjects\Juego de Salto Infinito\app\src\main\AndroidManifest.xml:21:27-74
+uses-sdk
+INJECTED from D:\AndroidStudioProjects\Juego de Salto Infinito\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from D:\AndroidStudioProjects\Juego de Salto Infinito\app\src\main\AndroidManifest.xml
+INJECTED from D:\AndroidStudioProjects\Juego de Salto Infinito\app\src\main\AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from D:\AndroidStudioProjects\Juego de Salto Infinito\app\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from D:\AndroidStudioProjects\Juego de Salto Infinito\app\src\main\AndroidManifest.xml

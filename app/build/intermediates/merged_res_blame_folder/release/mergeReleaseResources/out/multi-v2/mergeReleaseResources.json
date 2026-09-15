@@ -1,0 +1,45 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.ebyzom.skydreams.app-release-4:/values_values.arsc.flat",
+            "map": [
+                {
+                    "source": "D:\\AndroidStudioProjects\\Juego de Salto Infinito\\app\\src\\main\\res\\values\\styles.xml",
+                    "from": {
+                        "startLines": "1",
+                        "startColumns": "4",
+                        "startOffsets": "16",
+                        "endLines": "5",
+                        "endColumns": "12",
+                        "endOffsets": "382"
+                    },
+                    "to": {
+                        "startLines": "3",
+                        "startColumns": "4",
+                        "startOffsets": "103",
+                        "endLines": "7",
+                        "endColumns": "12",
+                        "endOffsets": "469"
+                    }
+                },
+                {
+                    "source": "D:\\AndroidStudioProjects\\Juego de Salto Infinito\\app\\src\\main\\res\\values\\strings.xml",
+                    "from": {
+                        "startLines": "1",
+                        "startColumns": "4",
+                        "startOffsets": "16",
+                        "endColumns": "47",
+                        "endOffsets": "59"
+                    },
+                    "to": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "47",
+                        "endOffsets": "98"
+                    }
+                }
+            ]
+        }
+    ]
+}

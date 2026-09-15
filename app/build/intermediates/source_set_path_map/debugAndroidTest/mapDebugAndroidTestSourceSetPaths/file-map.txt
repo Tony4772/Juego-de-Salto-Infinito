@@ -1,0 +1,4 @@
+com.ebyzom.skydreams.test.app-androidTest-0 D:\AndroidStudioProjects\Juego de Salto Infinito\app\build\generated\res\resValues\androidTest\debug
+com.ebyzom.skydreams.test.app-mergeDebugAndroidTestResources-1 D:\AndroidStudioProjects\Juego de Salto Infinito\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\merged.dir
+com.ebyzom.skydreams.test.app-mergeDebugAndroidTestResources-2 D:\AndroidStudioProjects\Juego de Salto Infinito\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\stripped.dir
+com.ebyzom.skydreams.test.app-debugAndroidTest-3 D:\AndroidStudioProjects\Juego de Salto Infinito\app\build\intermediates\merged_res\debugAndroidTest\mergeDebugAndroidTestResources

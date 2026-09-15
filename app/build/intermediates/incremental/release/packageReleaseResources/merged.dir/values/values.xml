@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Sky Dreams</string>
+    <style name="AppTheme" parent="android:style/Theme.Material.Light.NoActionBar">
+        <item name="android:fontFamily">sans</item><item name="android:colorAccent">#FF6FAE</item>
+        <item name="android:windowFullscreen">true</item><item name="android:navigationBarColor">#231D54</item>
+        <item name="android:windowLightStatusBar">false</item>
+    </style>
+</resources>

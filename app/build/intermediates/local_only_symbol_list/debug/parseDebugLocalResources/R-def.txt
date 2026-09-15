@@ -1,0 +1,16 @@
+R_DEF: Internal format may change without notice
+local
+drawable ic_launcher_background
+drawable ic_launcher_foreground
+mipmap ic_launcher
+mipmap ic_launcher_round
+raw music_loop
+raw sfx_best
+raw sfx_click
+raw sfx_gameover
+raw sfx_hit
+raw sfx_jump
+raw sfx_powerup
+raw sfx_star
+string app_name
+style AppTheme

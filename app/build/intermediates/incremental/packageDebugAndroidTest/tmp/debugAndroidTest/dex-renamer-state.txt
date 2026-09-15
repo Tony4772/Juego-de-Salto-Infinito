@@ -1,0 +1,4 @@
+#Sun Sep 13 05:06:08 GMT-05:00 2026
+base.0=D\:\\AndroidStudioProjects\\Juego de Salto Infinito\\app\\build\\intermediates\\dex\\debugAndroidTest\\mergeProjectDexDebugAndroidTest\\0\\classes.dex
+path.0=0/classes.dex
+renamed.0=classes.dex

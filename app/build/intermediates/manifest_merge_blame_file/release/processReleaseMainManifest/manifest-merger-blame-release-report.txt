@@ -1,0 +1,43 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.ebyzom.skydreams"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="23"
+9        android:targetSdkVersion="35" />
+10
+11    <application
+11-->D:\AndroidStudioProjects\Juego de Salto Infinito\app\src\main\AndroidManifest.xml:2:5-8:19
+12        android:allowBackup="false"
+12-->D:\AndroidStudioProjects\Juego de Salto Infinito\app\src\main\AndroidManifest.xml:2:77-104
+13        android:extractNativeLibs="false"
+14        android:label="Sky Dreams"
+14-->D:\AndroidStudioProjects\Juego de Salto Infinito\app\src\main\AndroidManifest.xml:2:50-76
+15        android:supportsRtl="true"
+15-->D:\AndroidStudioProjects\Juego de Salto Infinito\app\src\main\AndroidManifest.xml:2:105-131
+16        android:theme="@style/AppTheme" >
+16-->D:\AndroidStudioProjects\Juego de Salto Infinito\app\src\main\AndroidManifest.xml:2:18-49
+17        <activity
+17-->D:\AndroidStudioProjects\Juego de Salto Infinito\app\src\main\AndroidManifest.xml:3:9-7:20
+18            android:name="com.ebyzom.skydreams.MainActivity"
+18-->D:\AndroidStudioProjects\Juego de Salto Infinito\app\src\main\AndroidManifest.xml:3:19-47
+19            android:exported="true"
+19-->D:\AndroidStudioProjects\Juego de Salto Infinito\app\src\main\AndroidManifest.xml:3:85-108
+20            android:screenOrientation="portrait" >
+20-->D:\AndroidStudioProjects\Juego de Salto Infinito\app\src\main\AndroidManifest.xml:3:48-84
+21            <intent-filter>
+21-->D:\AndroidStudioProjects\Juego de Salto Infinito\app\src\main\AndroidManifest.xml:4:13-6:29
+22                <action android:name="android.intent.action.MAIN" />
+22-->D:\AndroidStudioProjects\Juego de Salto Infinito\app\src\main\AndroidManifest.xml:5:17-68
+22-->D:\AndroidStudioProjects\Juego de Salto Infinito\app\src\main\AndroidManifest.xml:5:25-66
+23
+24                <category android:name="android.intent.category.LAUNCHER" />
+24-->D:\AndroidStudioProjects\Juego de Salto Infinito\app\src\main\AndroidManifest.xml:5:68-127
+24-->D:\AndroidStudioProjects\Juego de Salto Infinito\app\src\main\AndroidManifest.xml:5:78-125
+25            </intent-filter>
+26        </activity>
+27    </application>
+28
+29</manifest>
