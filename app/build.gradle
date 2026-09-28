@@ -34,8 +34,20 @@ android {
             signingConfig signingConfigs.debugConfig
         }
     }
+
+    packaging {
+        jniLibs {
+            useLegacyPackaging = false
+        }
+    }
 }
 
 kotlin {
     jvmToolchain(21)
+}
+
+dependencies {
+    implementation('com.google.android.gms:play-services-ads:23.6.0') {
+        exclude group: 'androidx.privacysandbox.ads'
+    }
 }

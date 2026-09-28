@@ -212,20 +212,20 @@ class Btn{
   hit(px,py){ return abs(px-this.x)<=this.w/2+16 && abs(py-this.y)<=this.h/2+16; }
 }
 
-const btnPlay    = new Btn("JUGAR  ✦", 260, 58, C.PINK, "#FF3C82");
-const btnSound   = new Btn("SONIDO: ON", 260, 58, "#26A098", "#187872");
-const btnCredits = new Btn("CRÉDITOS", 260, 58, C.PURPLE, "#50429E");
-const btnBack    = new Btn("VOLVER", 260, 58, C.PURPLE, "#50429E");
-const btnRetry   = new Btn("REINTENTAR", 280, 58, C.PINK, "#FF3C82");
-const btnMenu    = new Btn("MENÚ", 280, 58, C.PURPLE, "#50429E");
-const btnResume  = new Btn("CONTINUAR", 280, 58, "#26A098", "#187872");
-const btnExit    = new Btn("SALIR AL MENÚ", 280, 58, C.PURPLE, "#50429E");
-const btnPause   = new Btn("❚❚", 64, 52, "rgba(27,20,78,0.47)", "rgba(27,20,78,0.47)");
+const btnPlay    = new Btn("JUGAR  ✦", 300, 62, C.PINK, "#FF3C82");
+const btnSound   = new Btn("SONIDO: ON", 300, 62, "#26A098", "#187872");
+const btnCredits = new Btn("CRÉDITOS", 300, 62, C.PURPLE, "#50429E");
+const btnBack    = new Btn("VOLVER", 300, 62, C.PURPLE, "#50429E");
+const btnRetry   = new Btn("REINTENTAR", 300, 62, C.PINK, "#FF3C82");
+const btnMenu    = new Btn("MENÚ", 300, 62, C.PURPLE, "#50429E");
+const btnResume  = new Btn("CONTINUAR", 300, 62, "#26A098", "#187872");
+const btnExit    = new Btn("SALIR AL MENÚ", 300, 62, C.PURPLE, "#50429E");
+const btnPause   = new Btn("❚❚", 64, 52, "rgba(27,20,78,0.6)", "rgba(27,20,78,0.6)");
 const ALLBTNS = [btnPlay,btnSound,btnCredits,btnBack,btnRetry,btnMenu,btnResume,btnExit,btnPause];
 function layoutButtons(){
-  btnPlay.layout(W/2, H*0.640); btnSound.layout(W/2, H*0.740); btnCredits.layout(W/2, H*0.840);
-  btnBack.layout(W/2, H*0.800); btnRetry.layout(W/2, H*0.620); btnMenu.layout(W/2, H*0.720);
-  btnResume.layout(W/2, H*0.560); btnExit.layout(W/2, H*0.680); btnPause.layout(W-52, 110);
+  btnPlay.layout(W/2, H*0.605); btnSound.layout(W/2, H*0.705); btnCredits.layout(W/2, H*0.805);
+  btnBack.layout(W/2, H*0.805); btnRetry.layout(W/2, H*0.630); btnMenu.layout(W/2, H*0.730);
+  btnResume.layout(W/2, H*0.540); btnExit.layout(W/2, H*0.650); btnPause.layout(W-52, 110);
 }
 layoutButtons();
 
@@ -463,19 +463,33 @@ function softCloud(x,y,w,h,color){
 
 function drawButton(b, txtSize){
   b.press = max(0, b.press - 0.08);
-  const s = 1 - b.press*0.07;
+  const s = 1 - b.press*0.05;
   const hw = b.w/2*s, hh = b.h/2*s;
-  ctx.fillStyle = "rgba(20,10,50,0.35)";
-  ctx.beginPath(); ctx.roundRect(b.x-hw, b.y-hh+5, hw*2, hh*2, hh); ctx.fill();
+  // soft drop shadow
+  ctx.fillStyle = "rgba(15,10,40,0.45)";
+  ctx.beginPath(); ctx.roundRect(b.x-hw, b.y-hh+6, hw*2, hh*2, hh); ctx.fill();
+  // gradient body
   const g = ctx.createLinearGradient(0, b.y-hh, 0, b.y+hh);
   g.addColorStop(0, b.cTop); g.addColorStop(1, b.cBot);
   ctx.fillStyle = g;
   ctx.beginPath(); ctx.roundRect(b.x-hw, b.y-hh, hw*2, hh*2, hh); ctx.fill();
-  ctx.fillStyle = "rgba(255,255,255,0.18)";
-  ctx.beginPath(); ctx.roundRect(b.x-hw+6, b.y-hh+4, hw*2-12, b.h*0.38, hh*0.8); ctx.fill();
+  // inner stroke for crisp edge
+  ctx.strokeStyle = "rgba(255,255,255,0.35)";
+  ctx.lineWidth = 1.8;
+  ctx.beginPath(); ctx.roundRect(b.x-hw, b.y-hh, hw*2, hh*2, hh); ctx.stroke();
+  // top highlight
+  ctx.fillStyle = "rgba(255,255,255,0.22)";
+  ctx.beginPath(); ctx.roundRect(b.x-hw+6, b.y-hh+3, hw*2-12, b.h*0.38, hh*0.8); ctx.fill();
+  // bold text with shadow
+  ctx.save();
+  ctx.shadowColor = "rgba(0,0,0,0.65)";
+  ctx.shadowOffsetY = 2;
+  ctx.shadowBlur = 4;
   font(txtSize, true, "center");
   ctx.fillStyle = "#FFFFFF";
-  ctx.fillText(b.label, b.x, b.y + txtSize*0.36);
+  ctx.textBaseline = "middle";
+  ctx.fillText(b.label, b.x, b.y);
+  ctx.restore();
 }
 
 function drawPrincess(x, y, scale){
@@ -667,95 +681,172 @@ function drawHud(){
 }
 
 function drawMenu(){
+  // card for contrast against light pastel sky
+  ctx.fillStyle = "rgba(22, 16, 58, 0.78)";
+  ctx.beginPath(); ctx.roundRect(16, H*0.08, W-32, H*0.87, 28); ctx.fill();
+  ctx.strokeStyle = "rgba(255, 255, 255, 0.25)";
+  ctx.lineWidth = 1.5;
+  ctx.beginPath(); ctx.roundRect(16, H*0.08, W-32, H*0.87, 28); ctx.stroke();
+
   for(let i=0;i<3;i++){
     const t = time*0.9 + i*2.1;
-    sparkle(W*(0.2+0.3*i) + sin(t)*26, H*(0.30+0.09*i) + cos(t*1.3)*18,
+    sparkle(W*(0.22+0.28*i) + sin(t)*24, H*(0.26+0.08*i) + cos(t*1.3)*14,
             5 + 2*sin(t*2), "rgba(255,235,160,0.75)", t*40);
   }
-  const titleY = H*0.225;
+  const titleY = H*0.195;
   glow(W/2, titleY-16, 150, hex2rgb(C.PINK), 60);
-  const g = ctx.createLinearGradient(W/2-130 + sin(time*1.2)*24, titleY-44,
-                                     W/2+130 + sin(time*1.2)*24, titleY-4);
+  const g = ctx.createLinearGradient(W/2-140, titleY-40, W/2+140, titleY);
   g.addColorStop(0,"#FFFFFF"); g.addColorStop(0.3,C.GOLD); g.addColorStop(0.5,"#FFFFFF");
   g.addColorStop(0.7,C.PINK_L); g.addColorStop(1,"#FFFFFF");
-  font(52, true, "center");
+  ctx.save();
+  ctx.shadowColor = "rgba(0,0,0,0.65)"; ctx.shadowOffsetY = 3; ctx.shadowBlur = 8;
+  font(48, true, "center");
   ctx.fillStyle = g;
   ctx.fillText("SKY DREAMS", W/2, titleY);
-  font(19, false, "center"); ctx.fillStyle = C.SOFT;
+  ctx.restore();
+
+  ctx.save();
+  ctx.shadowColor = "rgba(0,0,0,0.65)"; ctx.shadowOffsetY = 2; ctx.shadowBlur = 4;
+  font(18, true, "center"); ctx.fillStyle = "#FFE6A3";
   ctx.fillText("✦ Grace, la princesa de las nubes ✦", W/2, titleY+34);
-  const fy = H*0.45 + sin(time*1.6)*10;
+  ctx.restore();
+
+  const fy = H*0.40 + sin(time*1.6)*10;
   glow(W/2, fy, 95, hex2rgb(C.GOLD), 40);
-  drawPrincess(W/2, fy, 1.5 + 0.03*sin(time*2.4));
-  sparkle(W/2+44, fy-52 + sin(time*2)*6, 6, C.GOLD, time*60);
+  drawPrincess(W/2, fy, 1.45 + 0.03*sin(time*2.4));
+  sparkle(W/2+44, fy-48 + sin(time*2)*6, 6, C.GOLD, time*60);
+
   if(best > 0){
-    ctx.fillStyle = C.PANEL;
-    ctx.beginPath(); ctx.roundRect(W/2-105, H*0.535, 210, 38, 19); ctx.fill();
-    font(15, false, "center"); ctx.fillStyle = C.GOLD;
-    ctx.fillText("★  RÉCORD  " + best + " m", W/2, H*0.535+25);
+    ctx.fillStyle = "rgba(34, 25, 82, 0.9)";
+    ctx.beginPath(); ctx.roundRect(W/2-115, H*0.495, 230, 40, 20); ctx.fill();
+    ctx.strokeStyle = "rgba(255, 229, 119, 0.6)";
+    ctx.lineWidth = 1.5;
+    ctx.beginPath(); ctx.roundRect(W/2-115, H*0.495, 230, 40, 20); ctx.stroke();
+    ctx.save();
+    ctx.shadowColor = "rgba(0,0,0,0.6)"; ctx.shadowOffsetY = 1; ctx.shadowBlur = 3;
+    font(18, true, "center"); ctx.fillStyle = C.GOLD;
+    ctx.fillText("★  RÉCORD  " + best + " m", W/2, H*0.495+26);
+    ctx.restore();
   }
-  drawButton(btnPlay, 21);
-  drawButton(btnSound, 17);
-  drawButton(btnCredits, 17);
-  font(12, false, "center"); ctx.fillStyle = "rgba(255,255,255,0.75)";
-  ctx.fillText("Mantén pulsado ◀ o ▶ para volar  •  EBYZOM E.I.R.L.", W/2, H*0.925);
+
+  drawButton(btnPlay, 27);
+  drawButton(btnSound, 23);
+  drawButton(btnCredits, 23);
+
+  ctx.save();
+  ctx.shadowColor = "rgba(0,0,0,0.7)"; ctx.shadowOffsetY = 1; ctx.shadowBlur = 3;
+  font(14, true, "center"); ctx.fillStyle = "#EADEFF";
+  ctx.fillText("Usa tu dedo para guiar a Grace  •  EBYZOM E.I.R.L.", W/2, H*0.915);
+  ctx.restore();
 }
 
 function drawGameOver(){
   if(newBest && rand() < 0.12) confetti(rand()*W, -20, 2);
   const ease = 1 - Math.pow(1-panelT, 3);
-  const ph = H*0.46;
-  const top = H - (H - H*0.27)*ease;
-  ctx.fillStyle = "rgba(26,20,75,0.73)";
-  ctx.beginPath(); ctx.roundRect(28, top, W-56, ph, 30); ctx.fill();
+  const ph = H*0.50;
+  const top = H - (H - H*0.25)*ease;
+
+  ctx.fillStyle = "rgba(22, 16, 62, 0.90)";
+  ctx.beginPath(); ctx.roundRect(22, top, W-44, ph, 28); ctx.fill();
+  ctx.strokeStyle = "rgba(255, 255, 255, 0.25)";
+  ctx.lineWidth = 1.5;
+  ctx.beginPath(); ctx.roundRect(22, top, W-44, ph, 28); ctx.stroke();
+
   if(newBest){
     const pulse = 1 + 0.05*sin(time*8);
-    ctx.save(); ctx.translate(W/2, top+52); ctx.scale(pulse,pulse);
+    ctx.save(); ctx.translate(W/2, top+50); ctx.scale(pulse,pulse);
     ctx.fillStyle = C.GOLD;
-    ctx.beginPath(); ctx.roundRect(-130,-22, 260, 44, 22); ctx.fill();
-    font(20, true, "center"); ctx.fillStyle = "rgb(90,60,10)";
+    ctx.beginPath(); ctx.roundRect(-140,-22, 280, 44, 22); ctx.fill();
+    font(21, true, "center"); ctx.fillStyle = "rgb(90,60,10)";
     ctx.fillText("★ ¡NUEVO RÉCORD! ★", 0, 7);
     ctx.restore();
   } else {
-    font(33, true, "center"); ctx.fillStyle = "#FFFFFF";
-    ctx.fillText("¡A volar otra vez!", W/2, top+58);
+    ctx.save();
+    ctx.shadowColor = "rgba(0,0,0,0.6)"; ctx.shadowOffsetY = 2; ctx.shadowBlur = 4;
+    font(34, true, "center"); ctx.fillStyle = "#FFFFFF";
+    ctx.fillText("¡A volar otra vez!", W/2, top+56);
+    ctx.restore();
   }
-  font(19, false, "center"); ctx.fillStyle = C.SOFT;
-  ctx.fillText("Grace llegó a " + score + " metros", W/2, top+108);
-  sparkle(W/2-140, top+148, 9, C.GOLD, time*60);
-  font(24, true, "center"); ctx.fillStyle = C.GOLD;
-  ctx.fillText("Récord: " + best + " m", W/2, top+156);
-  drawButton(btnRetry, 19);
-  drawButton(btnMenu, 17);
-  font(14, false, "center"); ctx.fillStyle = "rgba(255,255,255,0.78)";
-  ctx.fillText("✦ " + stars + " estrellas recogidas", W/2, top+210);
+
+  ctx.save();
+  ctx.shadowColor = "rgba(0,0,0,0.6)"; ctx.shadowOffsetY = 1; ctx.shadowBlur = 3;
+  font(20, true, "center"); ctx.fillStyle = "#FFE6F3";
+  ctx.fillText("Grace llegó a " + score + " metros", W/2, top+104);
+  ctx.restore();
+
+  sparkle(W/2-130, top+142, 9, C.GOLD, time*60);
+  ctx.save();
+  ctx.shadowColor = "rgba(0,0,0,0.6)"; ctx.shadowOffsetY = 1; ctx.shadowBlur = 3;
+  font(26, true, "center"); ctx.fillStyle = C.GOLD;
+  ctx.fillText("Récord: " + best + " m", W/2, top+150);
+  ctx.restore();
+
+  drawButton(btnRetry, 26);
+  drawButton(btnMenu, 24);
+
+  ctx.save();
+  ctx.shadowColor = "rgba(0,0,0,0.6)"; ctx.shadowOffsetY = 1; ctx.shadowBlur = 3;
+  font(16, true, "center"); ctx.fillStyle = "#FFECA8";
+  ctx.fillText("✦ " + stars + " estrellas recogidas", W/2, top+204);
+  ctx.restore();
 }
 
 function drawPaused(){
-  ctx.fillStyle = "rgba(15,10,45,0.59)";
+  ctx.fillStyle = "rgba(15,10,45,0.68)";
   ctx.fillRect(0,0,W,H);
-  const top = H*0.30, ph = H*0.30;
-  ctx.fillStyle = "rgba(30,22,85,0.78)";
-  ctx.beginPath(); ctx.roundRect(36, top, W-72, ph, 30); ctx.fill();
-  font(32, true, "center"); ctx.fillStyle = "#FFFFFF";
-  ctx.fillText("PAUSA", W/2, top+52);
-  drawButton(btnResume, 19);
-  drawButton(btnExit, 17);
+  const top = H*0.28, ph = H*0.36;
+
+  ctx.fillStyle = "rgba(28, 20, 78, 0.90)";
+  ctx.beginPath(); ctx.roundRect(28, top, W-56, ph, 28); ctx.fill();
+  ctx.strokeStyle = "rgba(255, 255, 255, 0.25)";
+  ctx.lineWidth = 1.5;
+  ctx.beginPath(); ctx.roundRect(28, top, W-56, ph, 28); ctx.stroke();
+
+  ctx.save();
+  ctx.shadowColor = "rgba(0,0,0,0.6)"; ctx.shadowOffsetY = 2; ctx.shadowBlur = 4;
+  font(36, true, "center"); ctx.fillStyle = "#FFFFFF";
+  ctx.fillText("PAUSA", W/2, top+56);
+  ctx.restore();
+
+  drawButton(btnResume, 26);
+  drawButton(btnExit, 24);
 }
 
 function drawCredits(){
-  ctx.fillStyle = "rgba(27,20,78,0.63)";
+  ctx.fillStyle = "rgba(20,15,55,0.75)";
   ctx.fillRect(0,0,W,H);
+
+  ctx.fillStyle = "rgba(30, 22, 82, 0.82)";
+  ctx.beginPath(); ctx.roundRect(20, H*0.12, W-40, H*0.78, 28); ctx.fill();
+  ctx.strokeStyle = "rgba(255, 255, 255, 0.25)";
+  ctx.lineWidth = 1.5;
+  ctx.beginPath(); ctx.roundRect(20, H*0.12, W-40, H*0.78, 28); ctx.stroke();
+
+  ctx.save();
+  ctx.shadowColor = "rgba(0,0,0,0.6)"; ctx.shadowOffsetY = 2; ctx.shadowBlur = 4;
   font(36, true, "center"); ctx.fillStyle = "#FFFFFF";
-  ctx.fillText("CRÉDITOS", W/2, H*0.22);
-  const fy = H*0.36 + sin(time*1.5)*8;
-  drawPrincess(W/2, fy, 1.15);
-  font(19, true, "center"); ctx.fillStyle = C.GOLD;
+  ctx.fillText("CRÉDITOS", W/2, H*0.20);
+  ctx.restore();
+
+  const fy = H*0.35 + sin(time*1.5)*8;
+  drawPrincess(W/2, fy, 1.35);
+
+  ctx.save();
+  ctx.shadowColor = "rgba(0,0,0,0.6)"; ctx.shadowOffsetY = 2; ctx.shadowBlur = 4;
+  font(22, true, "center"); ctx.fillStyle = C.GOLD;
   ctx.fillText("SKY DREAMS", W/2, H*0.50);
-  font(15, false, "center"); ctx.fillStyle = "#FFFFFF";
+  ctx.restore();
+
+  ctx.save();
+  ctx.shadowColor = "rgba(0,0,0,0.6)"; ctx.shadowOffsetY = 1; ctx.shadowBlur = 3;
+  font(17, true, "center"); ctx.fillStyle = "#FFFFFF";
   ctx.fillText("Creado por EBYZOM E.I.R.L.", W/2, H*0.565);
-  ctx.fillText("Con Grace, la princesa de las nubes ✦", W/2, H*0.610);
-  ctx.fillText("© 2026 EBYZOM E.I.R.L.", W/2, H*0.665);
-  drawButton(btnBack, 17);
+  ctx.fillText("Con Grace, la princesa de las nubes ✦", W/2, H*0.615);
+  font(15, true, "center"); ctx.fillStyle = "#DCD0FF";
+  ctx.fillText("© 2026 EBYZOM E.I.R.L.", W/2, H*0.670);
+  ctx.restore();
+
+  drawButton(btnBack, 25);
 }
 
 // ------------------------------------------------------------ loop

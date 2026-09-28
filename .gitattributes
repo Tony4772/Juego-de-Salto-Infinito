@@ -1,2 +1,6 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+
+# Ensure gradlew uses Unix line endings even on Windows checkouts
+/gradlew text eol=lf
+*.bat text eol=crlf
