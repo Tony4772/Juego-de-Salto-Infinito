@@ -1,0 +1,8 @@
+{
+  "name": "Sky Dreams",
+  "description": "Infinite jump arcade game featuring Grace, the cloud princess",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
